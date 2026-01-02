@@ -1,4 +1,4 @@
-FROM oven/bun:1.3.5 AS base
+FROM dhi.io/bun:1.3-dev AS base
 
 WORKDIR /usr/src/app
 
@@ -29,12 +29,9 @@ RUN bun run build
 
 
 
-FROM nginxinc/nginx-unprivileged:1.29.4-bookworm AS release
+FROM dhi.io/nginx:1.29 AS release
 
-COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /usr/src/app/dist /usr/share/nginx/html
-
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nginx:nginx nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nginx:nginx --from=prerelease /usr/src/app/dist /usr/share/nginx/html
 
 EXPOSE 8080/tcp
