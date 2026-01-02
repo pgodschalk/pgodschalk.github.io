@@ -1,0 +1,22 @@
+[
+	{
+		"label": "vitest4 file test",
+		"command": "bun",
+		"args": ["run", "vitest", "run", "--no-file-parallelism", "$ZED_FILE"],
+		"tags": ["ts-test", "js-test", "tsx-test"]
+	},
+	{
+		"label": "vitest4 test $ZED_SYMBOL",
+		"command": "bun",
+		"args": [
+			"run",
+			"vitest",
+			"run",
+			"--no-file-parallelism",
+			"--testNamePattern",
+			"\"$ZED_CUSTOM_TYPESCRIPT_VITEST_TEST_NAME\"",
+			"$ZED_FILE"
+		],
+		"tags": ["ts-test", "js-test", "tsx-test"]
+	}
+]

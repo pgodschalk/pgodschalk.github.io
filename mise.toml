@@ -1,0 +1,3 @@
+[env]
+_.path = "$(pwd)/node_modules/.bin:$PATH"
+ASTRO_TELEMETRY_DISABLED = 1

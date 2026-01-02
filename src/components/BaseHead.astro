@@ -1,0 +1,81 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import GoogleAnalytics from "@components/GoogleAnalytics.astro";
+import {
+  BLUESKY_URL,
+  GEO_PLACENAME,
+  GEO_POSITION,
+  GEO_REGION,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  MASTODON_HANDLE,
+  MASTODON_URL,
+  RATING,
+  SITE_TITLE,
+  THEME_COLOR,
+} from "../consts";
+import "../styles/global.css";
+
+interface Props {
+  description: string;
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { description, title } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<title>{title}</title>
+<script>
+  if (window.trustedTypes?.createPolicy) {
+    window.trustedTypes.createPolicy("default", {
+      createScriptURL: (url: string) => url,
+    });
+  }
+</script>
+<GoogleAnalytics />
+<meta content={THEME_COLOR} name="theme-color" />
+<meta content={description} name="description" />
+<meta content="index, follow" name="robots" />
+<meta content="index,follow" name="googlebot" />
+<meta content={Astro.generator} name="generator" />
+<meta content={RATING} name="rating" />
+<meta content="no-referrer-when-downgrade" name="referrer" />
+<meta content="telephone=no" name="format-detection" />
+<meta content={GEO_POSITION} name="ICBM" />
+<meta content={GEO_POSITION} name="geo.position" />
+<meta content={GEO_REGION} name="geo.region" />
+<meta content={GEO_PLACENAME} name="geo.placename" />
+<link href={canonicalURL} rel="canonical" />
+<link href="/site.webmanifest" rel="manifest" />
+<link href="/humans.txt" rel="author" type="text/plain" />
+<link
+  href="https://creativecommons.org/licenses/by/4.0/"
+  rel="license"
+  type="text/html"
+/>
+<link href={GITHUB_URL} rel="me" type="text/html" />
+<link href={LINKEDIN_URL} rel="me" type="text/html" />
+<link href={BLUESKY_URL} rel="me" type="text/html" />
+<link href={MASTODON_URL} rel="me" type="text/html" />
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link
+  href="/apple-touch-icon.png"
+  rel="apple-touch-icon"
+  sizes="180x180"
+  type="image/png"
+/>
+<meta content={SITE_TITLE} name="apple-mobile-web-app-title" />
+<meta content={Astro.url} property="og:url" />
+<meta content="website" property="og:type" />
+<meta content={title} property="og:title" />
+<meta content={description} property="og:description" />
+<meta content={SITE_TITLE} property="og:site_name" />
+<meta content="en_US" property="og:locale" />
+<meta content={MASTODON_HANDLE} name="fediverse:creator" />

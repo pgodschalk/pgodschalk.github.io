@@ -1,0 +1,40 @@
+---
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type Props = Record<string, never>;
+---
+
+<script>
+  import { GA_MEASUREMENT_ID } from "../consts";
+
+  if (!import.meta.env.DEV) {
+    // Initialize dataLayer before gtag.js loads
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function (...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID);
+
+    const script = document.createElement("script");
+    const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+
+    if (window.trustedTypes?.createPolicy) {
+      const policy = window.trustedTypes.createPolicy("gtag", {
+        createScriptURL: (url: string) => {
+          if (url.startsWith("https://www.googletagmanager.com/")) {
+            return url;
+          }
+
+          throw new Error(`Untrusted URL: ${url}`);
+        },
+      });
+
+      script.src = policy.createScriptURL(gtagUrl) as unknown as string;
+    } else {
+      script.src = gtagUrl;
+    }
+
+    script.async = true;
+    document.head.appendChild(script);
+  }
+</script>

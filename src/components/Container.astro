@@ -1,0 +1,15 @@
+---
+import type { ComponentProps } from "astro/types";
+import ContainerInner from "./ContainerInner.astro";
+import ContainerOuter from "./ContainerOuter.astro";
+
+type Props = ComponentProps<typeof ContainerOuter>;
+
+const { ...props } = Astro.props;
+---
+
+<ContainerOuter {...props}>
+  <ContainerInner>
+    <slot />
+  </ContainerInner>
+</ContainerOuter>

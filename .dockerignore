@@ -165,7 +165,29 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-.certs/
-
 !public/*.ico
 !public/*.png
+
+.github
+.zed
+test
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+COPYING.md
+Dockerfile*
+LICENSE.txt
+README.md
+SECURITY.md
+.dockerignore
+.git
+.gitattributes
+.gitignore
+.markdownlint.jsonc
+.prettierignore
+.rules
+biome.json
+eslint.config.ts
+prettier.config.ts
+mise.toml
+mise.local.toml
+vitest.config.ts
