@@ -32,7 +32,7 @@
         "prettier": "^3.7.4",
         "prettier-plugin-astro": "^0.14.1",
         "prettier-plugin-astro-organize-imports": "^0.4.11",
-        "prettier-plugin-css-order": "^2.1.2",
+        "prettier-plugin-css-order": "^2.2.0",
         "prettier-plugin-nginx": "^1.0.3",
         "prettier-plugin-tailwindcss": "^0.7.2",
         "typescript": "^5.9.3",
@@ -1426,7 +1426,7 @@
 
     "prettier-plugin-astro-organize-imports": ["prettier-plugin-astro-organize-imports@0.4.11", "", { "dependencies": { "@astrojs/compiler": "^2.8.0", "typescript": "^5.4.5" }, "peerDependencies": { "prettier": "^3.0", "prettier-plugin-astro": "*", "prettier-plugin-tailwindcss": "*" }, "optionalPeers": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"] }, "sha512-qJQZ7qgnTVmk8ALe1SXpCVGa2QNanhsKn6ivfGQqWH8SCgQY1/poxLVras0Q4fqRBugR3xPRGxovODk1tmkbwA=="],
 
-    "prettier-plugin-css-order": ["prettier-plugin-css-order@2.1.2", "", { "dependencies": { "css-declaration-sorter": "^7.1.1", "postcss-less": "^6.0.0", "postcss-scss": "^4.0.9" }, "peerDependencies": { "prettier": "3.x" } }, "sha512-vomxPjHI6pOMYcBuouSJHxxQClJXaUpU9rsV9IAO2wrSTZILRRlrxAAR8t9UF6wtczLkLfNRFUwM+ZbGXOONUA=="],
+    "prettier-plugin-css-order": ["prettier-plugin-css-order@2.2.0", "", { "dependencies": { "css-declaration-sorter": "^7.3.0", "postcss-less": "^6.0.0", "postcss-scss": "^4.0.9" }, "peerDependencies": { "prettier": "3.x" } }, "sha512-GCkwEgQ2roT7le+zpUFQThPDO4x5EXcZmY9Rj6rvO++I/nATTGBWdZdsooha/BlvIBbZclJzXsgJdlKWrys9+w=="],
 
     "prettier-plugin-nginx": ["prettier-plugin-nginx@1.0.3", "", {}, "sha512-vV5q85s8XnV6NEgvz1gVLfZhmxAxY03MyOYj2ApBpjFkbs00lRsRkTmqO9L39ADuD18z1RRCcfZ3eVxKhI/nqg=="],
 
