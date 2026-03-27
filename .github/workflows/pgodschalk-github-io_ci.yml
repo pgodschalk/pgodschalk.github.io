@@ -221,7 +221,7 @@ jobs:
     steps:
       - id: deployment
         name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
   docker:
     name: Build and publish Docker image
     permissions:
