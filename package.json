@@ -64,7 +64,7 @@
 		"prettier-plugin-astro-organize-imports": "^0.4.11",
 		"prettier-plugin-css-order": "^2.2.0",
 		"prettier-plugin-nginx": "^1.0.3",
-		"prettier-plugin-tailwindcss": "^0.7.2",
+		"prettier-plugin-tailwindcss": "^0.8.0",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.59.1",
 		"vitest": "^4.1.5"
