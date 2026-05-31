@@ -35,7 +35,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@sentry/astro": "^10.32.1",
+		"@sentry/astro": "^10.55.0",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.2.4",
 		"astro": "^6.1.9",
