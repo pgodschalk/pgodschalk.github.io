@@ -38,7 +38,7 @@
 		"@sentry/astro": "^10.32.1",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.2.4",
-		"astro": "^6.1.9",
+		"astro": "^6.4.2",
 		"tailwindcss": "^4.3.0"
 	},
 	"devDependencies": {
