@@ -36,7 +36,7 @@
 	},
 	"dependencies": {
 		"@sentry/astro": "^10.58.0",
-		"@tailwindcss/typography": "^0.5.19",
+		"@tailwindcss/typography": "^0.5.20",
 		"@tailwindcss/vite": "^4.3.0",
 		"astro": "^6.4.8",
 		"tailwindcss": "^4.3.1"
